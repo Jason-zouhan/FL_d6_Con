@@ -1,0 +1,68 @@
+#MAIN_ST_PATTERN
+#FRONT
+STREET_PATTERN_WITH3~TrafficCastSeparateSign~(.+? (?:EAST|WEST|SOUTH|NORTH)BOUND LANES? ON .+?) AT (.+?)(?:,| AND) ((?:(?!\.).)+?) WILL BE.*
+STREET_PATTERN_WITH3~TrafficCastSeparateSign~(.+? (?:EAST|WEST|SOUTH|NORTH)BOUND,? (?:(?!ENTRANCE RAMPS?).)+?) (?:FROM|TO|BETWEEN) ((?:(?![AP]M).)+?) (?:TO|AND) ((?:(?!\.).)+?) WILL BE.*
+STREET_PATTERN_WITH3~TrafficCastSeparateSign~(.+? ALONG .+?) (?:BETWEEN|FROM) ((?:(?!\b[AP]M\b).)+?) (?:AND|TO) (.+?)
+STREET_PATTERN_WITH3~TrafficCastSeparateSign~(.+?) BETWEEN (.+?) AND (.+?) WILL BE.*
+STREET_PATTERN_WITH3~TrafficCastSeparateSign~.* (?:EAST|WEST|SOUTH|NORTH)BOUND (.+?) AND (?:EAST|WEST|SOUTH|NORTH)BOUND (.+?) RAMPS TO (?:EAST|WEST|SOUTH|NORTH)BOUND (.+?) WILL BE.*
+STREET_PATTERN_WITH3~TrafficCastSeparateSign~(.*?\bCLOSURES ON .+?) BETWEEN ((?:(?!\b[AP]M\b).)+?) AND (.+?)
+STREET_PATTERN_WITH3~TrafficCastSeparateSign~(.+?:\sFULL CLOSURE OF .+?) BETWEEN (.+?) AND (.+?) DIRVERS\b.*
+STREET_PATTERN_WITH5~TrafficCastSeparateSign~^BETWEEN (.+?) AND (.+?) - THE ((?:EAST|WEST|SOUTH|NORTH)BOUND) LANES WILL BE SHIFTED AND THE SPEED LIMIT ON (.+?)
+STREET_PATTERN_WITH3~TrafficCastSeparateSign~(.*\bON (?:(?!THE RAMP|TURN LANES?).)+?) FROM (.+?) TO (.+?) THERE WILL BE .* CLOSURES\b.*
+STREET_PATTERN_WITH3~TrafficCastSeparateSign~(.*\bON .+?(?<!THE RAMP)) (?:FROM|BETWEEN) ((?:(?!\b(?:[AP]M|\w+DAY)\b).)+?) TO ((?:(?!\b(?:[AP]M|\w+DAY)\b).)+?) WILL BE CLOSED\b.*
+STREET_PATTERN_WITH3~TrafficCastSeparateSign~((?:(?!(?:\b[AP]M\b|\b\w+DAY\b|\bTURN LANE\b|\b\w+BOUND \w+ RAMPS?\b|\bON THE RAMP\b)).)+?) FROM ((?:(?!\b(?:[AP]M|\w+DAY)\b).)+?) TO ((?:(?!\b(?:[AP]M|\w+DAY)\b).)+?) WILL BE (?:CLOSED|DETOURED)\b.*
+
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~(.*?\bTHE INTERSECTION OF .+?) AND (.+?) WILL BE CLOSED FROM \d+(?::\d+)? [AP]M\b.*
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~.+?\bDRIVERS GOING \w+ ON (.+?) FROM (.+?) SHOULD\b.*
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~^((?:THE|TWO|ONE) (?:WEST|SOUTH|EAST|NORTH)BOUND LANES? (?:AND (?:THE|TWO|ONE) (?:WEST|SOUTH|EAST|NORTH)BOUND LANES? )?AT .+?) AND (.+?) WILL BE CLOSED FROM \\d+.*
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~(.+? (?:EAST|WEST|SOUTH|NORTH)BOUND(?: LANES?| SHOULDER)? (?:ON|AT) .+?) (?:AT|TO|AND|NEAR|OVER|UNDER|BEFORE|FROM|WITHIN) (.+?) WILL BE.*
+STREET_PATTERN_WITH4~TrafficCastSeparateSign~^ONE (?:EAST|WEST|SOUTH|NORTH)BOUND LANE OR ONE (?:EAST|WEST|SOUTH|NORTH)BOUND LANE (?:AT|AND|NEAR|OVER|UNDER|BEFORE|TO) (\d+) (.+?) WILL BE.*
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~(.+? (?:EAST|WEST|SOUTH|NORTH)BOUND .+?) (?:AT|AND|NEAR|OVER|UNDER|BEFORE|TO) (.+?) WILL BE.*
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~^(THE (?:(?:EAST|WEST|SOUTH|NORTH)BOUND )?LANES? AT .+?) (?:AND|TO) (.+?) WILL BE CLOSED.*
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~(.+?(?<!THE LANES?|(?:NORTH|SOUTH|EAST|WEST)BOUND LANES?)) AT (.+?) (?:IS|WILL BE) CLOSED FROM \d+(?::\d+)? [AP]M\b.*
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~(.+?) (?:SOUTH|NORTH|EAST|WEST) OF (.+?) WILL BE CLOSED FROM \d+(?::\d+)? [AP]M\b.*
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~(.+?) (?:WEST|EAST|NORTH|SOUTH) OF (.+?) IS CLOSED\b.*
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~(.*\bON .+?) RAMP TO (.+?) WILL BE (?:COMPLETELY )?CLOSED\b.*
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~(.*(?: EXIT| ENTRANCE| THE)? RAMPS? (?:TO|FROM) .+?) (?:TO|FROM) (.+?) WILL BE CLOSED\b.*
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~(.*\bLANES? (?:ON|ALONG) .+?) IN FRONT OF (.+?) WILL BE CLOSED.*
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~(.+ (?:LANES?|CROSSING) ON .+?) (?:ONTO|OVER|NEAR|APPROACHING) (.+?) WILL BE CLOSED.*
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~(.+ LANES? FROM .+?) TO (.+?) WILL BE CLOSED FROM \d+(?::\d+)? [AP]M\b.*
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~(.+?) OVER (.+?) WILL BE CLOSED\b.*
+
+#BACK
+
+STREET_PATTERN_WITH3~TrafficCastSeparateSign~(?:.+?) WILL BE .+? ((?:EAST|WEST|SOUTH|NORTH)BOUND .+?) (?:FROM|BETWEEN) ((?:(?!\b[AP]M\b).)+?) (?:TO|AND) (.+)
+STREET_PATTERN_WITH3~TrafficCastSeparateSign~.*\bCONTRACTOR\b.*?\bWIDEN (.+?) FROM ((?:(?!\b[AP]M\b).)+?) TO (.+?)
+STREET_PATTERN_WITH3~TrafficCastSeparateSign~.*\bCONTRACTOR\b.*?\bON (.+?) BETWEEN ((?:(?!\b[AP]M\b).)+?) AND (.+?)
+STREET_PATTERN_WITH3~TrafficCastSeparateSign~(?:.+?) (?:ESTABLISHED|SCHEDULED).*? (?:IN|ON) (.+?) BETWEEN ((?:(?!\b[AP]M\b).)+?) AND (.+?)
+STREET_PATTERN_WITH3~TrafficCastSeparateSign~.*?\bLANES? WILL BE CLOSED (?:ALONG|ON) (.+?) BETWEEN ((?:(?!\b[AP]M\b).)+?) AND (.+?)
+STREET_PATTERN_WITH3~TrafficCastSeparateSign~.*?\bCLOSURES? ON (.+?) (?:FROM|BETWEEN) ((?:(?!\b[AP]M\b).)+?) (?:TO|AND) (.+)
+
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~.*\bTHE CONTRACTOR\b.*?\bON (.+?) IN THE MIDDLE OF ((?:(?!\b[AP]M\b).)+?)(?: EACH)? \w+DAY\b.*
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~.*\bTRAFFIC WILL BE SHIFTED ON (.+?) AT (.+?) FROM \d+\b.*
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~.+ (?:ESTABLISHED|SCHEDULED).*? ON (.+?) AT (.+?)
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~.*\bLANES? WILL BE CLOSED ON (.+?) \w+BOUND RAMP FROM (.+?)
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~((?:.+?)\bLANES? (?:WILL|MAY) BE CLOSED (?:ON|ALONG) .+?) AT (.+?) (?:FROM \d+:\d+|WHILE).*
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~.*?\bLANES? WILL BE CLOSED ALONG (.+?) AND (.+?) FROM \d+(?::\d+)? [AP]M\b.*
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~.*?\bLANES? WILL BE CLOSED\b.*?\bFROM ((?:(?!\b[AP]M\b).)+?) TO (.+?)
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~.*?\bCONTRACTOR WILL BE WORKING ON (.+?),\s*BEGINNING AT (.+?)
+
+
+#TWO SIDE
+STREET_PATTERN_WITH3~TrafficCastSeparateSign~(.+?) (?:WILL|MAY) BE\b.*?\bCLOSED\b.*?\b(?:FROM|BETWEEN) ((?:(?!\b[AP]M\b).)+?) (?:TO|AND) (.+?)
+STREET_PATTERN_WITH3~TrafficCastSeparateSign~(.+?) (?:WILL|MAY) REMAIN CLOSED\b.*?\b(?:FROM|BETWEEN) ((?:(?!\b[AP]M\b).)+?) (?:TO|AND) (.+?)
+
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~.*\bON (.+?) WILL BE CLOSED (?:AT|UNDER) (.+?)
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~.*\bON (.+?) WILL BE CLOSED ON THE (?:EXIT|ENTRANCE) RAMP TO (.+)
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~(.+?) WILL BE CLOSED AT (.+?) FROM \d+:\d+.*
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~(.+?) WILL BE CLOSED(?: JUST)? (?:SOUTH|NORTH|EAST|WEST) OF (.+)
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~(.+?) WILL BE REDUCED TO .+? UNDER (.+?) BETWEEN THE HOURS? OF\b.*
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~(.+?) WILL BE DETOURED ONTO (.+?) FROM \d+(?::\d+)? [AP]M\b.*
+STREET_PATTERN_WITH2~TrafficCastSeparateSign~(?:.+) ALONG ((?:(?!\b[AP]M\b).)+?) TO (.+?)
+
+STREET_PATTERN_WITH1~TrafficCastSeparateSign~(.*\b(?:LANES?|PORT) (?:AT|OF|ON) .+?) (?:WILL|CAN|MAY|MIGHT) BE CLOSED? FROM\s+\d+(?::\d+)? [AP]M\b.*
+STREET_PATTERN_WITH1~TrafficCastSeparateSign~(.*\b(?:LANE CLOSURES?) (?:AT|OF|ON|ALONG) .+?) (?:WILL|CAN|MAY|MIGHT) OCCUR FROM:?\s+\d+(?::\d+)? [AP]M\b.*
+STREET_PATTERN_WITH1~TrafficCastSeparateSign~THE CONTRACTOR CONTINUES .* ALONG (.+)
+
+
+

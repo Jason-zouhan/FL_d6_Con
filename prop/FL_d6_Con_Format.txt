@@ -1,0 +1,44 @@
+LOCATION_FORMAT\b([AP])MTO\b~TrafficCastSeparateSign~$1M TO
+LOCATION_FORMAT\s(\d+)\s?([AP]M)\b~TrafficCastSeparateSign~ $1:00 $2
+LOCATION_FORMAT\b(\d+:\d+ [AP]M) (\d+:\d+ [AP]M)\b~TrafficCastSeparateSign~$1 TO $2
+LOCATION_FORMAT\b(?:THROUGH|THORUGH|THRU)\b~TrafficCastSeparateSign~TO
+LOCATION_FORMAT\bCONTINUING FOR APPROXIMATELY\b~TrafficCastSeparateSign~CONTINUING UNTIL APPROXIMATELY
+LOCATION_FORMAT\bMIDNIGHT\b~TrafficCastSeparateSign~12:00 AM
+LOCATION_FORMAT\bJAN(?:\.|,)~TrafficCastSeparateSign~JANUARY
+LOCATION_FORMAT\bFEBR?(?:\.|,)~TrafficCastSeparateSign~FEBRUARY
+LOCATION_FORMAT\bMAR(?:\.|,)~TrafficCastSeparateSign~MARCH
+LOCATION_FORMAT\bAPR(?:\.|,)~TrafficCastSeparateSign~APRIL
+LOCATION_FORMAT\bMAY(?:\.|,)~TrafficCastSeparateSign~MAY
+LOCATION_FORMAT\bJUNE?(?:\.|,)~TrafficCastSeparateSign~JUNE
+LOCATION_FORMAT\bJULY?(?:\.|,)~TrafficCastSeparateSign~JULY
+LOCATION_FORMAT\bAUG(?:\.|,)~TrafficCastSeparateSign~AUGUST
+LOCATION_FORMAT\bSEPT?(?:\.|,)~TrafficCastSeparateSign~SEPTEMBER
+LOCATION_FORMAT\bOCT(?:\.|,)~TrafficCastSeparateSign~OCTOBER
+LOCATION_FORMAT\bNOV(?:\.|,)~TrafficCastSeparateSign~NOVEMBER
+LOCATION_FORMAT\bDEC(?:\.|,)~TrafficCastSeparateSign~DECEMBER
+LOCATION_FORMAT\b(JANUARY|FEBRUARY|MARCH|APRIL|MAY|JUNE|JULY|AUGUST|SEPTEMBER|OCTOBER|NOVEMBER|DECEMBER)(?=\d+)~TrafficCastSeparateSign~$1 
+LOCATION_FORMAT\bJANUARY\b~TrafficCastSeparateSign~01
+LOCATION_FORMAT\bFEBRUARY\b~TrafficCastSeparateSign~02
+LOCATION_FORMAT\bMARCH\b~TrafficCastSeparateSign~03
+LOCATION_FORMAT\bAPRIL\b~TrafficCastSeparateSign~04
+LOCATION_FORMAT\bMAY\b(?!\s*:)~TrafficCastSeparateSign~05
+LOCATION_FORMAT\bJUNE\b~TrafficCastSeparateSign~06
+LOCATION_FORMAT\bJULY\b~TrafficCastSeparateSign~07
+LOCATION_FORMAT\bAUGUST\b~TrafficCastSeparateSign~08
+LOCATION_FORMAT\bSEPTEMBER\b~TrafficCastSeparateSign~09
+LOCATION_FORMAT\bOCTOBER\b~TrafficCastSeparateSign~10
+LOCATION_FORMAT\bNOVEMBER\b~TrafficCastSeparateSign~11
+LOCATION_FORMAT\bDECEMBER\b~TrafficCastSeparateSign~12
+LOCATION_FORMAT(\d{2})\s(\d+)\s(\d{4})~TrafficCastSeparateSign~$1-$2-$3
+LOCATION_FORMAT(\d{2})\s(\d+),\s(\d{4})~TrafficCastSeparateSign~$1-$2-$3
+LOCATION_FORMAT\b(\d{2})\s(\d+)\b~TrafficCastSeparateSign~$1-$2
+LOCATION_FORMAT\b(\w+DAY)S~TrafficCastSeparateSign~$1
+LOCATION_FORMAT\b(MIDNIGHT)\b~TrafficCastSeparateSign~12:00 AM
+LOCATION_FORMAT\bSUNSET\b~TrafficCastSeparateSign~6:00 PM
+LOCATION_FORMAT\bDURING NIGHTTIME HOURS\b~TrafficCastSeparateSign~FROM 6:00 PM TO 5:59 AM
+LOCATION_FORMAT\bMID (\d{1,2})-(\d{4})\b~TrafficCastSeparateSign~$1-15-$2
+LOCATION_FORMAT^(\w+DAY,? \d+-\d+-\d+(?: AT \d+:\d+ [AP]M)?(?: AND CONTINUING)? UNTIL APPROXIMATELY \d+-\d+-\d+)~TrafficCastSeparateSign~FROM $1
+LOCATION_FORMAT\(24 AROUND THE CLOCK\)~TrafficCastSeparateSign~ 
+LOCATION_FORMAT\(ALTERNATE NIGHT\)~TrafficCastSeparateSign~ 
+LOCATION_FORMAT\..*DRIVERS? .* MAY:.*~TrafficCastSeparateSign~ 
+LOCATION_FORMAT\s{2,}~TrafficCastSeparateSign~ 

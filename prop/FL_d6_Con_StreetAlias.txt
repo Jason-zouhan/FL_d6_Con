@@ -1,0 +1,236 @@
+#Special cases
+#\b(?:I|SR|IN|US)(?:\s|-)?\d+(?: (?:W|S|E|N)B)? (?:EXIT|ENTER) (.+)~TrafficCastSeparateSign~$1
+\bLANES\b~TrafficCastSeparateSign~LANE
+\b(\d+ STREET),.*~TrafficCastSeparateSign~$1
+\b(\d+[A-Z]?) EXPRESS LANES?\b~TrafficCastSeparateSign~I-$1 EXPRESS LN
+,\s*FROM \d+ PM TO \d+ AM~TrafficCastSeparateSign~ 
+,\s*\w+DAY TO \w+DAY~TrafficCastSeparateSign~ 
+\bIN (?:[A-Z]|-)+ COUNTY$~TrafficCastSeparateSign~ 
+GENERAL PURPOSE LANE$~TrafficCastSeparateSign~ 
+SR A1A/MACARTHUR CAUSEWAY EAST BRIDG~TrafficCastSeparateSign~MACARTHUR CSWY
+ JUST$~TrafficCastSeparateSign~ 
+\bSTATE ROAD \(SR\) (\d+)~TrafficCastSeparateSign~SR-$1
+.* (I-\d+) .*~TrafficCastSeparateSign~$1
+
+#1
+ONE (?:EAST|WEST|SOUTH|NORTH)BOUND LANE AND ONE (?:EAST|WEST|SOUTH|NORTH)BOUND LANE\b~TrafficCastSeparateSign~ 
+^\s*ON (.+?) THE ENTRANCE\s*$~TrafficCastSeparateSign~$1
+#1
+
+(.+?)\..*~TrafficCastSeparateSign~$1
+^,~TrafficCastSeparateSign~ 
+^\.~TrafficCastSeparateSign~ 
+#(.+?),.*~TrafficCastSeparateSign~$1
+(.+)\b(?:MAY|WILL) BE CLOSED\b.*\b(?:MAY|WILL) BE CLOSED\b.*~TrafficCastSeparateSign~$1
+.*\bLANES? WILL BE CLOSED (?:ON|ALONG) (.+)~TrafficCastSeparateSign~$1
+.*\bLANES? IN EACH DIRECTION (?:ON|ALONG) (.+)~TrafficCastSeparateSign~$1
+.*\bTHE CONTRACTOR WILL BEGIN WATER MAIN INSTALLATION (?:ON|ALONG) (.+)~TrafficCastSeparateSign~$1
+(.+)\bIN ORDER TO PERFORM THIS WORK\b.*~TrafficCastSeparateSign~$1
+(.+)\bBETWEEN THE HOURS? OF\b.*~TrafficCastSeparateSign~$1
+(.+)\b(?:MAY|WILL) BE CLOSED\b.*~TrafficCastSeparateSign~$1
+
+^-\s*~TrafficCastSeparateSign~ 
+^THERE WILL BE .+ CLOSED ON~TrafficCastSeparateSign~ 
+^THERE WILL BE LANE CLOSURES?~TrafficCastSeparateSign~ 
+^USING A FLAGMAN~TrafficCastSeparateSign~ 
+^AT VARIOUS LOCATIONS?~TrafficCastSeparateSign~ 
+^THE CONTRACTOR WILL BE REMOVING AND REPLACING SIDEWALK ALONG (.+)~TrafficCastSeparateSign~$1
+^BOTH DIRECTIONS? AT~TrafficCastSeparateSign~ 
+^THE (?:ENTRANCE |EXIT )?RAMP TO~TrafficCastSeparateSign~ 
+^THE (?:(?:EAST|WEST|SOUTH|NORTH)BOUND )?LANE AT~TrafficCastSeparateSign~ 
+^(?:THE |TWO |ONE )?\w+BOUND (?:ON|AT) (.+)~TrafficCastSeparateSign~$1
+^(?:THE |TWO |ONE )?\w+BOUND LANE OF THE PORT OF~TrafficCastSeparateSign~ 
+^(?:THE |TWO |ONE )?\w+BOUND( LANE)?~TrafficCastSeparateSign~ 
+^(?:THE |ONE |TWO )?LANE ON THE RAMP FROM~TrafficCastSeparateSign~ 
+^(?:ALL |THE )?\w+BOUND AND \w+BOUND (.+)~TrafficCastSeparateSign~$1
+^(?:LANE|ALL) (.+)~TrafficCastSeparateSign~$1
+^JUST BEFORE (.+)~TrafficCastSeparateSign~$1
+^THE RAMP TO (.+)~TrafficCastSeparateSign~$1
+^(?:ENTRANCE |EXIT )?RAMPS? FROM~TrafficCastSeparateSign~ 
+^(?:THE )?\w+-TURN LANES? FROM\b~TrafficCastSeparateSign~ 
+^\w+BOUND LANE (.+)~TrafficCastSeparateSign~$1
+^(?:THE )?\w+BOUND(?:/\w+BOUND)? (.+?)~TrafficCastSeparateSign~$1 
+^STARTING THE WEEK OF.*?AROUND THE CLOCK:~TrafficCastSeparateSign~ 
+^BETWEEN ~TrafficCastSeparateSign~ 
+ 
+\b(\d+ STREET) FROM\b.*~TrafficCastSeparateSign~$1
+\b(?:(THE|TWO|ONE) \w+BOUND AND )?(THE|TWO|ONE) \w+BOUND LANE$~TrafficCastSeparateSign~ 
+.*\w+BOUND LANE AT\b~TrafficCastSeparateSign~ 
+
+.*\bCLOSURES? (?:ON|ALONG) (.+)~TrafficCastSeparateSign~$1
+.*\bROADWAY ALONG (.+)~TrafficCastSeparateSign~$1
+.*\bLANES? (?:ON|ALONG) (.+)~TrafficCastSeparateSign~$1
+
+
+,\s*(?:EAST|WEST|SOUTH|NORTH)$~TrafficCastSeparateSign~ 
+BETWEEN THE RAMPS?$~TrafficCastSeparateSign~ 
+(.+)(?<!\w+BOUND) AND .+~TrafficCastSeparateSign~$1
+^(?:AND|ON|ALONG|FROM|NEAR|AT) (.+)~TrafficCastSeparateSign~$1
+(.+)(?<=ROAD|STREET|PLACE|BOULVARD|DRIVE|AVENUE) (?:AND|ON|ALONG|BETWEEN|FROM|NEAR|AT)\b.*~TrafficCastSeparateSign~$1
+^\d+ BEFORE (.+)~TrafficCastSeparateSign~$1
+.*\b(?:\w+BOUND )?(?:SHOULDER|LANE) ON\b~TrafficCastSeparateSign~ 
+。*\b\w+BOUND(?= I-)~TrafficCastSeparateSign~ 
+\bFOR SHOULDER AND TURN\b.*~TrafficCastSeparateSign~ 
+(.+?) WILL REMAIN CLOSED IN~TrafficCastSeparateSign~$1
+(.+?) BEFORE\b.*~TrafficCastSeparateSign~$1
+\bWILL BE CLOSED$~TrafficCastSeparateSign~ 
+\bOFF RAMP$~TrafficCastSeparateSign~ 
+  THE$~TrafficCastSeparateSign~ 
+^(?:THE )?LANES?$~TrafficCastSeparateSign~ 
+\bWHILE THE\b.*~TrafficCastSeparateSign~ 
+(.+?) ON \w+DAY\b.*~TrafficCastSeparateSign~$1
+\bFROM \d+(?::\d+)? [AP]M\b.*~TrafficCastSeparateSign~ 
+(.+)\. ONE(?: .+?)? LANE IN .+~TrafficCastSeparateSign~$1
+(.+) ON \w+DAY,\w+ .+~TrafficCastSeparateSign~$1
+\bTO$~TrafficCastSeparateSign~ 
+\bMILE MARKER (\d+)\b~TrafficCastSeparateSign~MM $1
+
+#Common cases
+\p{Punct}+$~TrafficCastSeparateSign~ 
+(.*) MM\d+[A-Z]?\b.*$~TrafficCastSeparateSign~$1
+#(.*) (EAST|WEST|SOUTH|NORTH)\b.*~TrafficCastSeparateSign~$1
+(.*) (EAST|WEST|SOUTH|NORTH)BOUND\b.*~TrafficCastSeparateSign~$1
+(.*) (W|E|N|S)B\b.*~TrafficCastSeparateSign~$1
+(.+)\(.+~TrafficCastSeparateSign~$1
+(.+)&.*~TrafficCastSeparateSign~$1
+(.*) \b(?:AT|IN|ON|TO)\b .*~TrafficCastSeparateSign~$1
+.*\sOF\s(.*)~TrafficCastSeparateSign~$1
+(.*) EXIT .*~TrafficCastSeparateSign~$1
+ [SWEN]$~TrafficCastSeparateSign~ 
+ (NE|SW|NW|SE)$~TrafficCastSeparateSign~ 
+\s\s+~TrafficCastSeparateSign~ 
+/.*~TrafficCastSeparateSign~ 
+(?<=\d+| EAST| WEST| NORTH| SOUTH) HW$~TrafficCastSeparateSign~ 
+ (EAST|WEST|NORTH|SOUTH)$~TrafficCastSeparateSign~ 
+^EAST~TrafficCastSeparateSign~E
+^WEST~TrafficCastSeparateSign~W
+^SOUTH~TrafficCastSeparateSign~S
+^NORTH~TrafficCastSeparateSign~N
+.* US (\d+)~TrafficCastSeparateSign~US-$1
+.* THE (.*)~TrafficCastSeparateSign~$1
+^THE (.*)~TrafficCastSeparateSign~$1
+(.+) (?:THE|ALL|ONE)$~TrafficCastSeparateSign~$1
+
+^(W|E|S|N) (\d+)$~TrafficCastSeparateSign~$1 COUNTY ROAD $2
+\bINTERSTATE (\d+)~TrafficCastSeparateSign~I-$1
+^((?:W|E|S|N)\s)?CR\s?(\d+)$~TrafficCastSeparateSign~$1 COUNTY ROAD $2
+^((?:(?:W|E|S|N)\s)?US)\s?(\d+E?)\b~TrafficCastSeparateSign~$1-$2
+^((?:(?:W|E|S|N)\s)?I)\s?(\d+E?)\b~TrafficCastSeparateSign~$1-$2
+.*\b((?:[WESN]\s)?SR)\s?(\d+)\b~TrafficCastSeparateSign~$1-$2
+^((?:(?:W|E|S|N)\s)?US-\d+E?)\s?(BL\b|BR\b)~TrafficCastSeparateSign~$1-$2
+^((?:(?:W|E|S|N)\s)?I-\d+E?)\s?(BR\b|BL\b)~TrafficCastSeparateSign~$1-$2
+.*\b((?:(?:W|E|S|N)\s)?SR-\d+A?)(?:\s|-)?(BR\b|(?<!\d+)\d+\b)~TrafficCastSeparateSign~$1-$2
+^((?:(?:W|E|S|N)\s)?(US|I|SR)-\d+[AE]?(-(BR|BL|SPUR|EXIT|\d+))?)\b.*~TrafficCastSeparateSign~$1
+#\bSR-(\d+[AE]?(-(BR|BL|SPUR|EXIT|\d+))?)~TrafficCastSeparateSign~IN-$1
+^MM (\d+[A-Z])$~TrafficCastSeparateSign~EXIT $1
+(\d{4,5} .*)~TrafficCastSeparateSign~$1
+
+.* ([SWEN] BW \d+)~TrafficCastSeparateSign~$1
+(.+) (?:ENTRANCE|EXIT) (?:RAMP|RMP)$~TrafficCastSeparateSign~$1
+(.+) (?:RAMP|RMP)$~TrafficCastSeparateSign~$1
+(.+) ON\s*(?:RAMP|RMP)$~TrafficCastSeparateSign~$1
+\s+~TrafficCastSeparateSign~ 
+
+\bFIRST\b~TrafficCastSeparateSign~1ST
+\bSECOND\b~TrafficCastSeparateSign~2ND
+\bTHIRD\b~TrafficCastSeparateSign~3RD
+\bFOURTH\b~TrafficCastSeparateSign~4TH
+\bFIFTH\b~TrafficCastSeparateSign~5TH
+\bSIXTH\b~TrafficCastSeparateSign~6TH
+\bSEVENTH\b~TrafficCastSeparateSign~7TH
+\bEIGHTH\b~TrafficCastSeparateSign~8TH
+\b(NINETH|NINTH)\b~TrafficCastSeparateSign~9TH
+\bTENTH\b~TrafficCastSeparateSign~10TH
+\bELEVENTH\b~TrafficCastSeparateSign~11TH
+\bTWELFTH\b~TrafficCastSeparateSign~12TH
+\bTHIRTEENTH\b~TrafficCastSeparateSign~13TH
+\bFOURTEENTH\b~TrafficCastSeparateSign~14TH
+\bFIFTEENTH\b~TrafficCastSeparateSign~15TH
+\bSIXTEENTH\b~TrafficCastSeparateSign~16TH
+\bSEVENTEENTH\b~TrafficCastSeparateSign~17TH
+\bEIGHTEENTH\b~TrafficCastSeparateSign~18TH
+\bNINETEENTH\b~TrafficCastSeparateSign~19TH
+\bTWENTIETH\b~TrafficCastSeparateSign~20TH
+
+(?<!^)(\bSTREET$\b|\bSTREET\b)~TrafficCastSeparateSign~ST
+(?<!^)(\bAVENUE$\b|\bAVENUES$\b|\bAV$\b)~TrafficCastSeparateSign~AVE
+(?<!^)(\bROAD$\b)~TrafficCastSeparateSign~RD
+(?<!^)(\bBOULEVARD$\b|\bBL$\b|\bBLV$\b)~TrafficCastSeparateSign~BLVD
+(?<!^)(\bCAUSEWAY$\b)~TrafficCastSeparateSign~CSWY
+(?<!^)(\bDRIVE$\b)~TrafficCastSeparateSign~DR
+(?<!^)(\bPKY$\b|\bPARKWAY$\b|\bPARKWAY\b|\bPW$\b|\bPKW$\b|\bPK$\b|\bPKWAY$\b|\bPWY$\b)~TrafficCastSeparateSign~PKWY
+(?<!^)(\bEXPRESSWAY$\b|\bEX$\b|\bEXP$\b)~TrafficCastSeparateSign~EXPY
+(?<!^)(\bTUNNEL$\b)~TrafficCastSeparateSign~TUNL
+(?<!^)(\bBRIDGES$\b|\bBRIDGE$\b|\bBRDG\b)~TrafficCastSeparateSign~BRG
+(?<!^)(\bHIGHWAY$\b)~TrafficCastSeparateSign~HWY
+(?<!^)(\bCIRCLE$\b|\bCL$\b|\bCR$\b)~TrafficCastSeparateSign~CIR
+(?<!^)(\bPLACE$\b|\bPLC$\b)~TrafficCastSeparateSign~PL
+(?<!^)(\bALLEY$\b)~TrafficCastSeparateSign~ALY
+(?<!^)(\bVIADUCT$\b)~TrafficCastSeparateSign~VIAD
+(?<!^)(\bLANE\b)$~TrafficCastSeparateSign~LN
+(?<!^)(\bCREEK$\b)~TrafficCastSeparateSign~CRK
+(?<!^)(\bBYPASS$\b|\bBY$\b)~TrafficCastSeparateSign~BYP
+(?<!^)(\bTURNPIKE$\b)~TrafficCastSeparateSign~TPKE
+(?<!^)(\bPKE$\b)~TrafficCastSeparateSign~PIKE
+(?<!^)(\bCROSSING$\b)~TrafficCastSeparateSign~XING
+#(?<!^)(\bTRAIL$\b)~TrafficCastSeparateSign~TRL
+(?<!^)(\bCONNECTOR$\b)~TrafficCastSeparateSign~CONN
+(?<!^)(\bRIVER\b)$~TrafficCastSeparateSign~RIV
+(?<!^)(\bTHROUGHWAY$\b|\bTW$\b)~TrafficCastSeparateSign~THWY
+(?<!^)(\bWY$\b)~TrafficCastSeparateSign~WAY
+(?<!^)(\bHW$\b)~TrafficCastSeparateSign~HWY
+(?<!^)(\bLP$\b)~TrafficCastSeparateSign~LOOP
+(?<!^)(\bTL$\b)~TrafficCastSeparateSign~TRL
+(?<!^)(\bRW$\b)~TrafficCastSeparateSign~ROW
+(?<!^)(\bPLAZA\b)$~TrafficCastSeparateSign~PLZ
+(?<!^)(\bCENTER\b|\bCENTRE\b)$~TrafficCastSeparateSign~CTR
+(?<!^)(\bRIDGE\b)$~TrafficCastSeparateSign~RDG
+(?<!^)(\bBEND\b)$~TrafficCastSeparateSign~BND
+(?<!^)(\bCOVE\b)$~TrafficCastSeparateSign~CV
+(?<!^)(\bTERRACE\b|\bTE\b)$~TrafficCastSeparateSign~TER
+(?<!^)(\bCOURT\b)$~TrafficCastSeparateSign~CT
+
+^(\d+) BLOCK$~TrafficCastSeparateSign~BLOCK $1
+CONN~TrafficCastSeparateSign~ 
+
+\b(\d*?(11|12|13))(?=(?: (?:NORTH|SOUTH|WEST|EAST))?(?: AVE| ST| RD| LN| PL| TER| CT| DR| WALK| BLOCK))\b~TrafficCastSeparateSign~$1TH
+\b(\d*?1)(?=(?: (?:NORTH|SOUTH|WEST|EAST))?(?: AVE| ST| RD| LN| PL| TER| CT| DR| WALK| BLOCK))\b~TrafficCastSeparateSign~$1ST
+\b(\d*?2)(?=(?: (?:NORTH|SOUTH|WEST|EAST))?(?: AVE| ST| RD| LN| PL| TER| CT| DR| WALK| BLOCK))\b~TrafficCastSeparateSign~$1ND
+\b(\d*?3)(?=(?: (?:NORTH|SOUTH|WEST|EAST))?(?: AVE| ST| RD| LN| PL| TER| CT| DR| WALK| BLOCK))\b~TrafficCastSeparateSign~$1RD
+\b(\d+)(?=(?: (?:NORTH|SOUTH|WEST|EAST))?(?: AVE| ST| RD| LN| PL| TER| CT| DR| WALK| BLOCK))\b~TrafficCastSeparateSign~$1TH
+
+\bWEST (.+) (RD|ST|DR|PKWY|WAY|HWY|AVE|LN|BLVD|PL)$~TrafficCastSeparateSign~W $1 $2
+\bEAST (.+) (RD|ST|DR|PKWY|WAY|HWY|AVE|LN|BLVD|PL)$~TrafficCastSeparateSign~E $1 $2
+\bNORTH (.+) (RD|ST|DR|PKWY|WAY|HWY|AVE|LN|BLVD|PL)$~TrafficCastSeparateSign~N $1 $2
+\bSOUTH (.+) (RD|ST|DR|PKWY|WAY|HWY|AVE|LN|BLVD|PL)$~TrafficCastSeparateSign~S $1 $2
+
+^(\d+)$~TrafficCastSeparateSign~BLOCK $1
+^STATE ROAD (\d+)$~TrafficCastSeparateSign~SR-$1
+
+
+#Special cases
+(.*) NEAR (.*)~TrafficCastSeparateSign~$1
+KEY -~TrafficCastSeparateSign~ 
+^\d+ (.+? (?:AVE|ST|LN|BLVD))$~TrafficCastSeparateSign~$1
+^(?:W|E|S|N) ((I|US|SR|IN)-.+)$~TrafficCastSeparateSign~$1
+\bGOLDEN GLADES INTERCHANGE\b~TrafficCastSeparateSign~GOLDEN GLADES
+(.+ ST) (?:ALL|ONE) \w+BOUND\b.*~TrafficCastSeparateSign~$1
+^\w+BOUND (.+)~TrafficCastSeparateSign~$1
+ST,$~TrafficCastSeparateSign~ST
+I NTERSTATE (\d+)~TrafficCastSeparateSign~I-$1
+^AND (.+)~TrafficCastSeparateSign~$1
+^N W (.+)~TrafficCastSeparateSign~$1
+^ONSW (.+)~TrafficCastSeparateSign~$1
+\bS TATE ROAD (\d+)~TrafficCastSeparateSign~SR-$1
+\bLE JEUNE ROADAND FROM\b.*~TrafficCastSeparateSign~LE JEUNE RD
+^\d+ ((.+) (RD|ST|DR|PKWY|WAY|HWY|AVE|LN|BLVD|PL|CSWY|CT|TER))$~TrafficCastSeparateSign~$1
+^(.+? (RD|ST|DR|PKWY|EXPY|TUNL|BRG|CIR|TPKE|PIKE|XING|CONN|RIV|THWY|LOOP|TRL|PLZ|CTR|WAY|HWY|AVE|LN|BLVD|PL|CSWY|CT|TER))\b.*$~TrafficCastSeparateSign~$1
+^([SN][WE] \d*(11|12|13))$~TrafficCastSeparateSign~$1TH ST
+^([SN][WE] \d*1)$~TrafficCastSeparateSign~$1ST ST
+^([SN][WE] \d*3)$~TrafficCastSeparateSign~$1RD ST
+^([SN][WE] \d*2)$~TrafficCastSeparateSign~$1ND ST
+^([SN][WE] \d+)$~TrafficCastSeparateSign~$1TH ST
+
+
+#TT MAP FORMAT
+\bSR-(\d+[A-Z]?)\b~TrafficCastSeparateSign~FL-$1
